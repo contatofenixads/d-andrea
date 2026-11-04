@@ -1,0 +1,962 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "node scripts/prepare-vercel.mjs",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/agro/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/assistencia-tecnica/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/10-dicas-para-manutencao-preventiva-de-esteiras-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/batatec-2024-demakine-marcou-presenca-de-sucesso/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-dimensionar-sua-esteira-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-escolher-a-esteira-transportadora-ideal-para-a-sua-empresa/",
+      "destination": "/a-empresa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/demakine-marcou-presenca-na-agrishow-2024/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/demakine-na-5a-edicao-da-batatec/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/demakine-na-agrishow-2024/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/demakine-na-agrishow-2025/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/demakine-na-agrishow-2026/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/demakine-na-agrobrasilia-2026/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/guia-completo-sobre-esteiras-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/guia-completo-sobre-roscas-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-custa-movimentar-carga-na-mao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/cases/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/cases/carga-e-descarga-em-centro-de-distribuicao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/cases/ensaque-em-fabrica-de-racao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/cases/recebimento-e-ensaque-de-graos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/cases/triagem-de-residuos-reciclaveis/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/clientes/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/downloads/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/a-empresa/",
+      "destination": "/a-empresa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/agro/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/assistencia-tecnica/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/10-dicas-para-manutencao-preventiva-de-esteiras-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/batatec-2024-demakine-marcou-presenca-de-sucesso/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/como-dimensionar-sua-esteira-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/como-escolher-a-esteira-transportadora-ideal-para-a-sua-empresa/",
+      "destination": "/a-empresa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/demakine-marcou-presenca-na-agrishow-2024/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/demakine-na-5a-edicao-da-batatec/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/demakine-na-agrishow-2024/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/demakine-na-agrishow-2025/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/demakine-na-agrishow-2026/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/demakine-na-agrobrasilia-2026/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/guia-completo-sobre-esteiras-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/guia-completo-sobre-roscas-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/quanto-custa-movimentar-carga-na-mao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/carga-e-descarga-em-centro-de-distribuicao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/ensaque-em-fabrica-de-racao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/recebimento-e-ensaque-de-graos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/triagem-de-residuos-reciclaveis/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/clientes/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/contato/",
+      "destination": "/contato/",
+      "permanent": true
+    },
+    {
+      "source": "/en/downloads/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/faq/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/ferramentas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/politica-de-privacidade/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/calha-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/cartrans-carrinho-transportador/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/elevador-de-canecas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/elevador-de-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-para-transporte-de-frutas-e-legumes/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-articulada/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-dalla/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-de-caixas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-em-v-para-cama-de-frango-aviario/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-horizontal/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-para-cesta-basica/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-para-granel/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-para-reciclagem-triagem/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/esteira-transportadora-para-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/linha-fio-para-costura-de-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/maquina-de-costurar-sacos-gk-26/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/maquina-de-costurar-sacos-siruba-aa-6/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/mini-sistema-de-costura/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/peneira-para-carvao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/rosca-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/produtos/rosca-transportadora-chupim/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/projetos-especiais/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/alimentos-e-racao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/construcao-e-mineracao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/farmaceutico/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/fertilizantes-e-insumos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/logistica-e-distribuicao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/metalurgico/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/plastico-e-embalagens/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/segmentos/reciclagem-e-residuos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/termos-de-uso/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/vagas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/a-empresa/",
+      "destination": "/a-empresa/",
+      "permanent": true
+    },
+    {
+      "source": "/es/agro/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/assistencia-tecnica/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/10-dicas-para-manutencao-preventiva-de-esteiras-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/batatec-2024-demakine-marcou-presenca-de-sucesso/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/como-dimensionar-sua-esteira-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/como-escolher-a-esteira-transportadora-ideal-para-a-sua-empresa/",
+      "destination": "/a-empresa/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/demakine-marcou-presenca-na-agrishow-2024/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/demakine-na-5a-edicao-da-batatec/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/demakine-na-agrishow-2024/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/demakine-na-agrishow-2025/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/demakine-na-agrishow-2026/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/demakine-na-agrobrasilia-2026/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/guia-completo-sobre-esteiras-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/guia-completo-sobre-roscas-transportadoras/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/quanto-custa-movimentar-carga-na-mao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/cases/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/cases/carga-e-descarga-em-centro-de-distribuicao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/cases/ensaque-em-fabrica-de-racao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/cases/recebimento-e-ensaque-de-graos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/cases/triagem-de-residuos-reciclaveis/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/clientes/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/contato/",
+      "destination": "/contato/",
+      "permanent": true
+    },
+    {
+      "source": "/es/downloads/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/faq/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/ferramentas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/politica-de-privacidade/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/calha-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/cartrans-carrinho-transportador/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/elevador-de-canecas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/elevador-de-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-para-transporte-de-frutas-e-legumes/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-articulada/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-dalla/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-de-caixas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-em-v-para-cama-de-frango-aviario/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-horizontal/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-para-cesta-basica/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-para-granel/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-para-reciclagem-triagem/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/esteira-transportadora-para-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/linha-fio-para-costura-de-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/maquina-de-costurar-sacos-gk-26/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/maquina-de-costurar-sacos-siruba-aa-6/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/mini-sistema-de-costura/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/peneira-para-carvao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/rosca-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/produtos/rosca-transportadora-chupim/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/projetos-especiais/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/alimentos-e-racao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/construcao-e-mineracao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/farmaceutico/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/fertilizantes-e-insumos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/logistica-e-distribuicao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/metalurgico/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/plastico-e-embalagens/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/segmentos/reciclagem-e-residuos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/termos-de-uso/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/es/vagas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/export/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/ferramentas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-privacidade/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/calha-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/cartrans-carrinho-transportador/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/elevador-de-canecas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/elevador-de-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-para-transporte-de-frutas-e-legumes/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-articulada/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-dalla/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-de-caixas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-em-v-para-cama-de-frango-aviario/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-horizontal/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-para-cesta-basica/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-para-granel/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-para-reciclagem-triagem/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/esteira-transportadora-para-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/linha-fio-para-costura-de-sacaria/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/maquina-de-costurar-sacos-gk-26/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/maquina-de-costurar-sacos-siruba-aa-6/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/mini-sistema-de-costura/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/peneira-para-carvao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/rosca-transportadora/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/produtos/rosca-transportadora-chupim/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/projetos-especiais/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/alimentos-e-racao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/construcao-e-mineracao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/farmaceutico/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/fertilizantes-e-insumos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/logistica-e-distribuicao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/metalurgico/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/plastico-e-embalagens/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/segmentos/reciclagem-e-residuos/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/termos-de-uso/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/vagas/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/vagas/ajudante-de-producao/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/vagas/montador-soldador/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/vagas/montador-soldador-mig/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/vagas/vendedor-externo/",
+      "destination": "/produtos/",
+      "permanent": true
+    },
+    {
+      "source": "/vagas/vendedor-interno/",
+      "destination": "/produtos/",
+      "permanent": true
+    }
+  ]
+}
