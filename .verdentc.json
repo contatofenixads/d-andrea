@@ -1,0 +1,9 @@
+{
+  "deploy": {
+    "type": "static",
+    "rootDir": ".",
+    "buildCmd": "python3 scripts/build.py",
+    "outputDir": "dist",
+    "entryFile": "index.html"
+  }
+}
