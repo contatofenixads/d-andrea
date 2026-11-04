@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://d-andrea.vercel.app/sitemap.xml

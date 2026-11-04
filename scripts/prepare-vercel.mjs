@@ -20,7 +20,7 @@ async function prepare(directory) {
       pages++;
       if (origin) {
         const html = await readFile(file, 'utf8');
-        await writeFile(file, html.replaceAll('https://demakine-base-industrial-alan.alaanhenriquee94.chatgpt.site', origin));
+        await writeFile(file, html.replaceAll('https://d-andrea.vercel.app', origin));
       }
     }
   }

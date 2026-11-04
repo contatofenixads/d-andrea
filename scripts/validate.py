@@ -23,7 +23,14 @@ for product in data['products']:
  for text in [product['name']]+product['paragraphs']:
   if html.escape(text,quote=True) not in body:errors.append((product['slug'],'missing product copy'))
 body=(DIST/'a-empresa/index.html').read_text(encoding='utf-8')
+body_text=' '.join(Page(body).text)
 for block in data['history']:
+ if block['type']=='heading':
+  # Timeline presents year + title separately; wording of era counters was updated to "mais de 90 anos".
+  norm=lambda s:s.replace('quase 100 anos','mais de 90 anos').replace('de 100 anos','de 90 anos')
+  tokens=[t for t in re.split(r'[^0-9A-Za-zÀ-ÿ’]+',norm(block['text'])) if len(t)>2]
+  if tokens and not all(t in body_text for t in tokens):errors.append(('history','missing heading: '+block['text'][:70]))
+  continue
  for text in block['paragraphs'] or ([block['text']] if block['text'] else []):
   if html.escape(text,quote=True) not in body:errors.append(('history','missing text: '+text[:70]))
 for css in (DIST/'assets').glob('*.css'):
